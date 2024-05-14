@@ -13,7 +13,9 @@ namespace SpecFlowGoogleSearch.StepDefinitions
         string baseUrl = "https://www.google.com/";
         public GoogleStepDefinitions()
         {
-            driver = new ChromeDriver();
+            ChromeOptions option = new ChromeOptions();
+            option.AddArguments("--headless");
+            driver = new ChromeDriver(option);           
         }
 
         [Given(@"Go to google page")]

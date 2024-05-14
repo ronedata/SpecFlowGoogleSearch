@@ -35,7 +35,7 @@ namespace SpecFlowGoogleSearch.StepDefinitions
         [When(@"I search for ""([^""]*)""")]
         public void WhenISearchFor(string SearchText)
         {
-            var search = driver.FindElement(By.Name("q"));
+            var search = driver.FindElement(By.Id("sb_form_q"));
             search.SendKeys(SearchText);
 
             //var searchButton = driver.FindElement(By.XPath("(//input[@name='btnK'])[2]"));

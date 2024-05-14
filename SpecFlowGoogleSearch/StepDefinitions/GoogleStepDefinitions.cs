@@ -18,7 +18,8 @@ namespace SpecFlowGoogleSearch.StepDefinitions
         {
             ChromeOptions option = new ChromeOptions();
             option.AddArgument("--remote-debugging-pipe");
-            //option.AddArgument("--headless");
+            option.AddArgument("--headless");
+            option.AddArgument("no-sandbox");
             option.AddArgument("--window-size=1920,1080");
             driver = new ChromeDriver(option);           
         }

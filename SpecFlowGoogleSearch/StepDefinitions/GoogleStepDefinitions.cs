@@ -15,6 +15,7 @@ namespace SpecFlowGoogleSearch.StepDefinitions
         {
             ChromeOptions option = new ChromeOptions();
             option.AddArguments("--headless");
+            option.AddArguments("--no-sandbox");
             driver = new ChromeDriver(option);           
         }
 

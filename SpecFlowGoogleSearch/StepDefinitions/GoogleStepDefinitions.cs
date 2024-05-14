@@ -14,6 +14,7 @@ namespace SpecFlowGoogleSearch.StepDefinitions
         public GoogleStepDefinitions()
         {
             ChromeOptions option = new ChromeOptions();
+            option.AddArguments("--remote-debugging-pipe");
             option.AddArguments("--headless");
             driver = new ChromeDriver(option);           
         }

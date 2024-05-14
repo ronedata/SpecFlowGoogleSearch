@@ -99,7 +99,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I search for \"specflow sample test c#\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
- testRunner.Then("I should see title \"specflow sample test c# - Google Search\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I should see title \"specflow sample test c# - Search\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

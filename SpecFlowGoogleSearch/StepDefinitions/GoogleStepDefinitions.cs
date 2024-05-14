@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
 using System;
 using TechTalk.SpecFlow;
 
@@ -9,13 +10,15 @@ namespace SpecFlowGoogleSearch.StepDefinitions
     [Binding]
     public class GoogleStepDefinitions
     {
-        WebDriver driver;
-        string baseUrl = "https://www.google.com/";
+        readonly WebDriver driver;
+
+
+        string baseUrl = "https://www.bing.com/";
         public GoogleStepDefinitions()
         {
             ChromeOptions option = new ChromeOptions();
             option.AddArgument("--remote-debugging-pipe");
-            option.AddArgument("--headless");
+            //option.AddArgument("--headless");
             option.AddArgument("--window-size=1920,1080");
             driver = new ChromeDriver(option);           
         }
@@ -34,9 +37,11 @@ namespace SpecFlowGoogleSearch.StepDefinitions
             var search = driver.FindElement(By.Name("q"));
             search.SendKeys(SearchText);
 
-            var searchButton = driver.FindElement(By.XPath("(//input[@name='btnK'])[2]"));
-            searchButton.Click();
+            //var searchButton = driver.FindElement(By.XPath("(//input[@name='btnK'])[2]"));
+            //searchButton.Click();
             //search.Submit();
+            Actions actions = new Actions(driver);
+            actions.SendKeys(Keys.Enter).Perform();
         }
 
 

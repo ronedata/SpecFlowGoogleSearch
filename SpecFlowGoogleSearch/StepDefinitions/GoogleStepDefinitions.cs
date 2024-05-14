@@ -27,6 +27,7 @@ namespace SpecFlowGoogleSearch.StepDefinitions
         [Given(@"Go to google page")]
         public void GivenGoToGooglePage()
         {
+            Thread.Sleep(2000);
             //driver.Navigate().GoToUrl(baseUrl);
             driver.Url = baseUrl;
             driver.Manage().Window.Maximize();

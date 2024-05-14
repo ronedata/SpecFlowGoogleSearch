@@ -24,5 +24,7 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build
+    - name: Start local server
+      run: dotnet run --project SpecFlowGoogleSearch      
     - name: Test
       run: dotnet test --filter Category=tag1

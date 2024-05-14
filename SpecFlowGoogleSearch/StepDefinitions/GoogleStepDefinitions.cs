@@ -41,8 +41,8 @@ namespace SpecFlowGoogleSearch.StepDefinitions
             //var searchButton = driver.FindElement(By.XPath("(//input[@name='btnK'])[2]"));
             //searchButton.Click();
             //search.Submit();
-            //Actions actions = new Actions(driver);
-            //actions.SendKeys(Keys.Enter).Perform();
+            Actions actions = new Actions(driver);
+            actions.SendKeys(Keys.Enter).Perform();
         }
 
 

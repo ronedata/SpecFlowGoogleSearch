@@ -13,7 +13,7 @@ namespace SpecFlowGoogleSearch.StepDefinitions
         readonly WebDriver driver;
 
 
-        string baseUrl = "https://www.bing.com/";
+        string baseUrl = "https://www.google.com.bd/";
         public GoogleStepDefinitions()
         {
             ChromeOptions option = new ChromeOptions();
@@ -37,11 +37,13 @@ namespace SpecFlowGoogleSearch.StepDefinitions
         public void WhenISearchFor(string SearchText)
         {
             //var search = driver.FindElement(By.XPath("//input[@id='sb_form_q']"));
-            //search.SendKeys(SearchText);
+            var search = driver.FindElement(By.Name("q"));
+            search.SendKeys(SearchText);
 
-            //var searchButton = driver.FindElement(By.XPath("(//input[@name='btnK'])[2]"));
+            Thread.Sleep(1000);
+            var searchButton = driver.FindElement(By.XPath("(//input[@name='btnK'])[2]"));
             //searchButton.Click();
-            //search.Submit();
+            search.Submit();
             //Actions actions = new Actions(driver);
             //actions.SendKeys(Keys.Enter).Perform();
         }

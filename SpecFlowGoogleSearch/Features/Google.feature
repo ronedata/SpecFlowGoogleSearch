@@ -6,4 +6,4 @@ A short summary of the feature
 Scenario: Google Search Result
 	Given Go to google page
 	When I search for "specflow sample test c#"
-	Then I should see title "Bing"
+	Then I should see title "specflow sample test c# - Google Search"
